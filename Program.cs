@@ -1,5 +1,4 @@
 using System;
-using System.Media;
 using System.Threading;
 
 namespace CybersecurityAwarenessBot
@@ -8,14 +7,16 @@ namespace CybersecurityAwarenessBot
     {
         static void Main(string[] args)
         {
-            PlayGreeting();
+            DisplayGreeting();
             DisplayLogo();
 
             Console.Write("Please enter your name: ");
             string userName = Console.ReadLine();
+
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine($"\nHello, {userName}! Welcome to the Cybersecurity Awareness Bot!");
             Console.ResetColor();
+
             Console.WriteLine("=====================================\n");
 
             ChatBot bot = new ChatBot();
@@ -54,20 +55,11 @@ namespace CybersecurityAwarenessBot
             }
         }
 
-        static void PlayGreeting()
+        static void DisplayGreeting()
         {
-            try
-            {
-                SoundPlayer player = new SoundPlayer("Assets/Greeting.wav");
-                player.PlaySync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error playing greeting: " + ex.Message);
-            }
+            Console.WriteLine("Welcome to the Cybersecurity Awareness Bot!");
         }
 
-// minor improvement
         static void DisplayLogo()
         {
             Console.ForegroundColor = ConsoleColor.Green;
