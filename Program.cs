@@ -67,6 +67,7 @@ namespace CybersecurityAwarenessBot
             }
         }
 
+// minor improvement
         static void DisplayLogo()
         {
             Console.ForegroundColor = ConsoleColor.Green;
