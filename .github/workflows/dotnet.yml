@@ -13,5 +13,5 @@ jobs:
     - uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '6.0.x'
-    - run: dotnet restore
-    - run: dotnet build --no-restore
+    - run: dotnet restore CybersecurityAwarenessBot.csproj
+    - run: dotnet build CybersecurityAwarenessBot.csproj --no-restore
