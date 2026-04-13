@@ -66,7 +66,7 @@ namespace CybersecurityAwarenessBot
                 Console.WriteLine("Error playing greeting: " + ex.Message);
             }
         }
-
+// minor improvement
         static void DisplayLogo()
         {
             Console.ForegroundColor = ConsoleColor.Green;
